@@ -42,6 +42,7 @@
       <?php if(isset($_SESSION['error_message']) OR isset($_SESSION['success_message'])) :?>
         <?php Message::display(); ?>
       <?php endif;?>
+      <p>Hallllloooooo</p>
      	<?php require($view); ?>
      </div>
     </div><!-- /.container -->
