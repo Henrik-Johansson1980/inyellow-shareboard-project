@@ -31,7 +31,7 @@
           <?php else : ?>  
             <li><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
             <li><a href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
-          <?php endif; ?>>
+          <?php endif; ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -39,9 +39,18 @@
 
     <div class="container">
      <div class="row">
+      <?php if(isset($_SESSION['error_message']) OR isset($_SESSION['success_message'])) :?>
+        <?php Message::display(); ?>
+      <?php endif;?>
      	<?php require($view); ?>
      </div>
-
     </div><!-- /.container -->
+  <footer>
+    <!-- Copyright -->
+    <p class="text-center">&copy; <?php echo date('Y');?>
+      <a href="https://henrik-johansson.se/">Henrik Johansson</a>
+    </p>
+    <!-- Copyright -->
+  </footer>
 </body>
 </html>

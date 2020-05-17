@@ -1,3 +1,85 @@
+body {
+  background-color: #333;
+  color: #eee;
+}
 .btn-share {
   margin-bottom: 20px;
+}
+.navbar {
+  border: none;
+  border-radius: 0;
+  padding: 30px 0;
+}
+.navbar-header .navbar-brand{
+  color:goldenrod;
+  font-size: 32px;
+}
+
+/* .navbar-inverse .navbar-nav > li > a{
+  color:goldenrod;
+} */
+.navbar-inverse .navbar-nav > li > a:hover{
+  color:goldenrod;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #222;
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+
+/*Share styling*/
+.well {
+  background-color: #444;
+   border:none;
+  color: #eee;
+  padding:0;
+}
+.well div{
+  padding:10px;
+}
+.well h3 {
+  padding: 1rem;
+  background-color: darkgoldenrod;
+}
+
+.custom-small{
+  color: green;
+  font-size: .1;
+}
+.well a {
+  color: darkgoldenrod;
+}
+.well a:hover {
+  color: #ddd;
+}
+
+/*Form styling*/
+.panel{
+  background-color: #444;
+  border:none;
+ color: #eee;
+ padding:0;
+}
+
+.panel-heading{
+  background-color: goldenrod;
+}
+.panel-title{
+  font-weight: 900;
+}
+
+
+footer p {
+  line-height: 60px;
+  color: #aaa;
+}
+footer a{
+  color: #aaa;
+}
+footer a:hover{
+  color: goldenrod;
 }

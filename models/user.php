@@ -2,22 +2,33 @@
 class UserModel extends Model {
   public function register() {
         //Sanitize Post
-        $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);        
+        $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
         if(isset($post['submit'])) {
           if($post['submit']){
-            $password;
-            // foreach($post as $key){
-            //   if($key == ""){
-            //     echo "Fill out the form";
-            //     return;
-            //   }
-            // }
+            $password = null;
+            
+            if (isset($post['name']) AND $post['name'] == "") {
+              Message::setMessage('Enter a name', 'error');
+              return;
+            }
+            if (isset($post['email']) AND $post['email'] == "") {
+              Message::setMessage('Enter an email adress', 'error');
+              return;
+            } elseif ( $post['email'] != ""){
+              if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+                Message::setMessage('Enter a valid email adress', 'error');
+                return;
+              }
+            }
+
             if (isset($post['password']) AND $post['password'] != "") {
               $password = password_hash($post['password'], PASSWORD_DEFAULT);
+            } elseif ( $post['password'] == "") {
+              Message::setMessage('Enter a password', 'error');
+              return;
             }
-            else {
-              die('Enter a password');
-            }
+            
             //Insert
             $this->query('INSERT INTO users ( name, email, password) VALUES (:name, :email, :password)');
             $this->bind(":name", $post['name']);
@@ -64,9 +75,9 @@ class UserModel extends Model {
             header('Location:'. ROOT_URL . 'shares');
           }
           else
-            echo 'Incorrect Username or Password ';  
+            Message::setMessage('Incorrect Username or Password', 'error');
         } else {
-          echo 'Incorrect Username or Password ';
+          Message::setMessage('Incorrect Username or Password', 'error');
         }
       }
       return;

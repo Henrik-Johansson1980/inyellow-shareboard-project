@@ -6,6 +6,7 @@
  require 'classes/Bootstrap.php';
  require 'classes/Controller.php';
  require 'classes/Model.php';
+ require 'classes/Message.php';
 
  require 'controllers/home.php'; 
  require 'controllers/shares.php';

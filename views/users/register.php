@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel">
   <div class="panel-heading">
     <h3 class="panel-title">Register User</h3>
   </div>
@@ -6,7 +6,7 @@
     <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
       <div class="form-group">
         <label>Name</label>
-        <input type="text" name="name" class="form-control" />
+        <input type="text" name="name" class="form-control" autofocus/>
       </div>
       <div class="form-group">
         <label>Email</label>
