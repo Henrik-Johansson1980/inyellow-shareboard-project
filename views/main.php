@@ -42,7 +42,7 @@
       <?php if(isset($_SESSION['error_message']) OR isset($_SESSION['success_message'])) :?>
         <?php Message::display(); ?>
       <?php endif;?>
-     	<?php var_dump($view);//require($view); ?>
+     	<?php var_dump($view); require($view); ?>
      </div>
     </div><!-- /.container -->
   <footer>
