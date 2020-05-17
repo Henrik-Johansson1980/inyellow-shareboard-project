@@ -9,6 +9,7 @@ body {
   border: none;
   border-radius: 0;
   padding: 30px 0;
+  margin-bottom: 30px;
 }
 .navbar-header .navbar-brand{
   color:goldenrod;
@@ -44,6 +45,7 @@ footer{
 .well h3 {
   padding: 1rem;
   background-color: darkgoldenrod;
+  font-weight: 900;
 }
 
 .custom-small{
