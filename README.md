@@ -7,5 +7,6 @@ PHP-Based Shareboard Project based on the Eduonix course  Learn Object Oriented 
 * OOP
 * MVC
 * MySql
+* Bootstrap
 
 
